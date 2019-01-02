@@ -1,10 +1,6 @@
-# wordpress-generate-static-site
+# Convert WordPress VIP Site to Static HTML
+
 Convert a WordPress VIP site to a static HTML site. Requires the Simply Static plugin.  
-
-## Documentation  \
-for  \
-Static Site Generation
-
 
 ## Summary
 
@@ -27,7 +23,7 @@ rtCamp worked with PMC to convert two WordPress.com VIP hosted sites into static
 1.  Disable comments for all posts using following WP-CLI command: `wp post list --format=ids | xargs wp post update --comment_status=closed`
 1.  Add shortcodes which are not supported outside the WP VIP environment. (Currently this only includes `protected-iframe`).
     * The relevant code is provided in the included `functions.php` file. The functions from this file should be included in your WordPress site's `functions.php`.
-1.  "Embed shortcodes" needs to be enabled from Jetpack modules: [https://jetpack.com/support/control-jetpacks-modules-on-one-page/](https://jetpack.com/support/control-jetpacks-modules-on-one-page/)
+1.  "Embed shortcodes" needs to be [enabled from Jetpack modules](https://jetpack.com/support/control-jetpacks-modules-on-one-page/)
     * A copy of Jetpack v5.8 (the version used when this method was tested) is included in this repository in case the latest version does not work properly.
 1.  Install [Simply Static](https://wordpress.org/plugins/simply-static/) plugin on the intermediate server. Do the necessary settings and start static site generation.
     * A copy of Simply Static v2.1.0 (the latest at the time of this writing) is included in this repository in case the version on WordPress.org plugin repo no longer works.
